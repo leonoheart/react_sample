@@ -14,31 +14,29 @@ class HomeHeader extends React.Component {
     render() {
         return (
             <div id="home-header" className="clear-fix">
-                <div className="home-header-left float-left">
+                <div className="home-header-left">
                     <div id="logo">
                         <a href="./index.html"><h1>Gourmet</h1></a> 
                     </div>
                 </div>
-                <div className="home-header-right float-right">
-                    <Link to="/Login">
-                        <i className="icon-user"></i>
-                    </Link>
-                </div>
                 <div className="home-header-middle">
-                    <div className='city-select'>
-                        <Link to="/city">
-                            <span>{this.props.cityName}</span>
-                            &nbsp;
-                            <i className="icon-angle-down"></i>
-                        </Link>
-                    </div>
                     <form role="form" className="search-container form-inline">
+                        <Link to="/city">
+                                <span>{this.props.cityName}</span>
+                                &nbsp;
+                                <i className="icon-angle-down"></i>
+                        </Link>
                         <i className="icon-search"></i>
                         &nbsp;
                         <SearchInput value="" enterHandle={this.enterHandle.bind(this)}/>
-                        <button className="btn btn-primary btn-danger" type="submit">Search</button> 
+                        <button className="btn btn-primary btn-danger" type="submit">Search</button>  
                     </form>                                                                   
                 </div>
+                <div className="home-header-right">
+                    <Link to="/Login">
+                        <i className="icon-user"></i>
+                    </Link>
+                </div>  
             </div>
         )
     }
