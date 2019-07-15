@@ -9,6 +9,8 @@ import './static/css/font.css'
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
+// import 'bootstrap/dist/js/bootstrap';
+// import 'jquery/src/jquery';
 
 // 创建 Redux 的 store 对象
 const store = configureStore()

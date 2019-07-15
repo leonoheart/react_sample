@@ -7,6 +7,8 @@ import Category from '../../components/Category'
 import Ad from './subpage/Ad'
 import List from './subpage/List'
 import LeftLabel from '../../components/LeftLabel';
+import Carourel from '../../components/Carourel';
+
 
 class Home extends React.Component {
     constructor(props, context) {
@@ -17,9 +19,12 @@ class Home extends React.Component {
         return (
             <div>
                 <HomeHeader cityName={this.props.userinfo.cityName}/>
-                <Category/>
+                <hr/>
+                
                 <div style={{height: '15px'}}>{/* 分割线 */}</div>
                 <LeftLabel/>
+                <Carourel />
+                <Category/>
                 <Ad/>
                 <List cityName={this.props.userinfo.cityName}/>
             </div>

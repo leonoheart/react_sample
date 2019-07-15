@@ -15,11 +15,9 @@ class HomeHeader extends React.Component {
         return (
             <div id="home-header" className="clear-fix">
                 <div className="home-header-left float-left">
-                    <Link to="/city">
-                        <span>{this.props.cityName}</span>
-                        &nbsp;
-                        <i className="icon-angle-down"></i>
-                    </Link>
+                    <div id="logo">
+                        <a href="./index.html"><h1>Gourmet</h1></a> 
+                    </div>
                 </div>
                 <div className="home-header-right float-right">
                     <Link to="/Login">
@@ -27,11 +25,19 @@ class HomeHeader extends React.Component {
                     </Link>
                 </div>
                 <div className="home-header-middle">
-                    <div className="search-container">
+                    <div className='city-select'>
+                        <Link to="/city">
+                            <span>{this.props.cityName}</span>
+                            &nbsp;
+                            <i className="icon-angle-down"></i>
+                        </Link>
+                    </div>
+                    <form role="form" className="search-container form-inline">
                         <i className="icon-search"></i>
                         &nbsp;
                         <SearchInput value="" enterHandle={this.enterHandle.bind(this)}/>
-                    </div>
+                        <button className="btn btn-primary btn-danger" type="submit">Search</button> 
+                    </form>                                                                   
                 </div>
             </div>
         )

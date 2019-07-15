@@ -23,7 +23,7 @@ module.exports = {
             { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel' },
             { test: /\.less$/, exclude: /node_modules/, loader: 'style!css!postcss!less' },
             { test: /\.css$/, loader: 'style!css!postcss' },
-            { test:/\.(png|gif|jpg|jpeg|bmp)$/, loader:'url-loader?limit=8000' },  // 限制大小5kb
+            { test:/\.(png|jpg)$/, loader:'url-loader?limit=8192' },  // 限制大小8kb
             { test:/\.(png|woff|woff2|svg|ttf|eot)($|\?)/i, loader:'url-loader?limit=5000'} // 限制大小小于5k
         ]
     },

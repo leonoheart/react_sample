@@ -3,12 +3,6 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import './style.less'
 
 
-
-
-
-
-
-
 class LeftLabel extends React.Component {
     constructor(props, context) {
         super(props, context);
