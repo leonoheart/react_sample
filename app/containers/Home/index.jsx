@@ -24,7 +24,7 @@ class Home extends React.Component {
                 <div style={{height: '15px'}}>{/* 分割线 */}</div>
                 <LeftLabel/>
                 <Category/>
-                <Carourel />
+                
                
                 <Ad/>
                 <List cityName={this.props.userinfo.cityName}/>
