@@ -6,7 +6,7 @@ import HomeHeader from '../../components/HomeHeader'
 import Category from '../../components/Category'
 import Ad from './subpage/Ad'
 import List from './subpage/List'
-import LeftLabel from '../../components/LeftLabel';
+import Sidebar from '../../components/Sidebar';
 import Carourel from '../../components/Carourel';
 
 
@@ -22,7 +22,7 @@ class Home extends React.Component {
                 <hr/>
                 
                 <div style={{height: '15px'}}>{/* 分割线 */}</div>
-                <LeftLabel/>
+                <Sidebar/>
                 <Category/>
                 
                
