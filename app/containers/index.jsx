@@ -19,13 +19,22 @@ class App extends React.Component {
         return (
             <div>
                 <div id='overlay'>
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="900px" height="500px">
+                    <svg id="svg1" version="1.1" xmlns="http://www.w3.org/2000/svg" width="900px" height="500px">
                         <text stroke="#dd3915" fill="#dd3915">Gourmet
-                        <animateTransform attributeName="transform" type="scale" from="1" to="3" dur="10s" repeatCount="indefinite" additive="sum"/>
-                        <animateTransform attributeName="transform" type="rotate" from="0 100 200" to="360 30 20" dur="10s" fill="freeze" repeatCount="indefinite" additive="sum"/>
+                        <animateTransform attributeName="transform" type="scale" begin="0s" dur="10s" from="1" to="3" dur="10s" repeatCount="1" additive="sum"/>
+                        <animateTransform attributeName="transform" type="rotate" begin="0s" dur="10s" from="0 100 200" to="360 30 20" dur="10s" fill="freeze" repeatCount="1" additive="sum"/>
                         </text>
                     </svg>  
+                    <svg  id="svg2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="900px" height="500px">
+                            <text stroke="#dd3915" fill="#dd3915" y="300" x="200">Gourmet 
+                            <set attributeName="opacity" to="0" begin="0s" /> 
+                            <animate attributeName="opacity" begin="10s" dur="5s" from="0" to="1" repeatCount="1" />     
+                            <animate attributeName="opacity" begin="15s" dur="5s" from="1" to="0" repeatCount="1" />                       
+                            </text>
+                    </svg>  
                 </div>
+                
+                
                
                  {/* <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
                             <path id="path"
@@ -62,7 +71,16 @@ class App extends React.Component {
     }
     componentDidMount() {
         // 获取位置信息
-        setTimeout(function(){ $("#overlay").css("display", "none");}, 8000);
+        setTimeout(function(){$("#overlay").css("display", "none");}, 20000);    
+
+
+       
+
+         
+
+
+        
+       
        
 
         let cityName = LocalStore.getItem(CITYNAME)
