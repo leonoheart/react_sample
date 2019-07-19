@@ -11,7 +11,7 @@ class HomeAd extends React.Component {
     render() {
         return (
             <div id="home-ad">
-                <h2>超值特惠</h2>
+                <h2>Recommendation</h2>
                 <div className="ad-container clear-fix">
                     {this.props.data.map((item, index) => {
                         return <div key={index} className="ad-item float-left">

@@ -6,6 +6,7 @@ import LocalStore from '../util/localStore'
 import { CITYNAME } from '../config/localStoreKey'
 import * as userInfoActionsFromOtherFile from '../actions/userinfo' 
 import './style.less'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 class App extends React.Component {
     constructor(props, context) {
@@ -26,43 +27,24 @@ class App extends React.Component {
                         </text>
                     </svg>  
                     <svg  id="svg2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="900px" height="500px">
-                            <text stroke="#dd3915" fill="#dd3915" y="300" x="200">Gourmet 
+                            <text stroke="#dd3915" fill="#dd3915" y="50%" x="50%">Gourmet 
                             <set attributeName="opacity" to="0" begin="0s" /> 
                             <animate attributeName="opacity" begin="10s" dur="5s" from="0" to="1" repeatCount="1" />     
                             <animate attributeName="opacity" begin="15s" dur="5s" from="1" to="0" repeatCount="1" />                       
                             </text>
                     </svg>  
                 </div>
-                
-                
-               
-                 {/* <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                            <path id="path"
-                                d="M20,20 Q50,60 80,140 T340,100"
-                                stroke="#FFF"
-                                fill="none" />
-                            <text>
-                                <textPath id="textPath" xlink:href="#path">Gourmet</textPath>
-                            </text>
-                            <animate xlink:href="#textPath"
-                                    attributeName="startOffset"
-                                    from="0%" to="100%"
-                                    begin="0s"
-                                    dur="5s"
-                                    repeatCount="indefinite"
-                                    keyTimes="0;1"
-                                    calcMode="spline"
-                                    keySplines="0.1 0.2 .22 1"/>
-                        </svg>  */}
                         
-            
-                <div> 
-                    {
-                        this.state.initDone
-                        ? this.props.children
-                        : <div>正在加载...</div>
-                    }
-                </div>
+
+                <ReactCSSTransitionGroup component="div" className="react-container" transitionName="slide-in" transitionEnterTimeout={300} transitionLeaveTimeout={300}>
+                    <div key={this.props.location.pathname} className={this.props.location.pathname}>
+                        {
+                            this.state.initDone
+                            ? this.props.children
+                            : <div>正在加载...</div>
+                        }
+                    </div>
+                </ReactCSSTransitionGroup>        
             </div>
             
             
@@ -71,17 +53,8 @@ class App extends React.Component {
     }
     componentDidMount() {
         // 获取位置信息
-        setTimeout(function(){$("#overlay").css("display", "none");}, 20000);    
-
-
-       
-
-         
-
-
-        
-       
-       
+        setTimeout(function(){$("#svg1").css("display", "none");}, 10000);     
+        setTimeout(function(){$("#overlay").css("display", "none");}, 20000);     
 
         let cityName = LocalStore.getItem(CITYNAME)
         if (cityName == null) {

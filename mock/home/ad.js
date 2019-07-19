@@ -1,32 +1,26 @@
 module.exports = [
     {
-        title: '暑假5折',
-        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191639092-2000037796.png',
-        link: 'http://www.imooc.com/wap/index'
+        title: 'helveticrolls',
+        img: 'https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
     },
     {
-        title: '特价出国',
-        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191648124-298129318.png',
-        link: 'http://www.imooc.com/wap/index'
+        title: 'turkey',
+        img: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=387&q=80',
     },
     {
-        title: '亮亮车',
-        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191653983-1962772127.png',
-        link: 'http://www.imooc.com/wap/index'
+        title: 'hamburger',
+        img: 'https://images.unsplash.com/photo-1481931098730-318b6f776db0?ixlib=rb-1.2.1&auto=format&fit=crop&w=337&q=80',
     },
     {
-        title: '学钢琴',
-        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191700420-1584459466.png',
-        link: 'http://www.imooc.com/wap/index'
+        title: 'asparagas',
+        img: 'https://images.unsplash.com/photo-1432139509613-5c4255815697?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=332&q=80',
     },
     {
-        title: '电影',
-        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191706733-367929553.png',
-        link: 'http://www.imooc.com/wap/index'
+        title: 'beans',
+        img: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80',
     },
     {
-        title: '旅游热线',
-        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191713186-495002222.png',
-        link: 'http://www.imooc.com/wap/index'
+        title: 'nuts',
+        img: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
     }
 ]
